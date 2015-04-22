@@ -16,8 +16,7 @@ names(Xtrain)[1:3]<-c("ID","Subject","Data")
 ##Obtain merged data of test and train data sets
 mergeData<-merge(Xtest,Xtrain,all=TRUE)
 names(mergeData)<-c("ID","Subject","Data",features[,2])
-library(dplyr)
-mergeData<-arrange(mergeData,Data,ID)
+mergeData<-mergeData[order(mergeData$Data,mergeData$ID),]
 ##------------------------------------------------------------
 
 ##--------------------STEP 2----------------------------------
@@ -54,7 +53,7 @@ names(mergeData)<-mgsub(text ,replacement,ignore.case = F,names(mergeData))
 ##with the average of each variable for each activity and each subject.
 mergeData<-group_by(mergeData,Subject,Activity)
 summarise_each(mergeData,funs(mean))->tidyData
-tidyData<-data.frame(tidyData)
+tidyData<-data.frame(tidyData,check.names = F)
 tidyData$Data<-NULL
 tidyData$ID<-NULL
 rwidth<-NULL
