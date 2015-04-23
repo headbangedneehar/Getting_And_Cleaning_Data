@@ -3,9 +3,16 @@ run_analysis.R Script:
 
 The script must be run in R console or Rstudio console. The script , when run , takes input files from the 'UCI HAR dataset' folder which includes activity_labels, features, features_info and folders test and train containing X, y and subject text files each. The output of the script returns a new text file named 'Tidy Data.txt', which shows the mean values of the accelerometer and gyroscope calculations acquired that were acquired in each experiments.
 
-NOTE-1: *The user must set its working directory as 'UCI HAR dataset' for the script to work*
-NOTE-2: *The final 'Tidy Data.txt' obtained must be read in R with parameter 'header=TRUE'*
-*Required packages*: plyr, dplyr, qdap
+NOTE-1: 
+--------
+*The user must set its working directory as 'UCI HAR dataset' for the script to work*
+NOTE-2:
+-------- 
+*The final 'Tidy Data.txt' obtained must be read in R with read.table with parameters 'header=TRUE,check.names=FALSE' and with parameters 'header=TRUE, check.names=FALSE, sep="" when read.csv is used'*
+
+*Required packages*:
+-------------------- 
+plyr, dplyr, qdap
 
 ===================================================================================
 
@@ -46,6 +53,6 @@ STEP-5:From the data set in step 4, creates a second, independent tidy data set 
 -format() is used to format the data set.
 -Names of the columns are then removed so that the first column would provide as column names and the columns would be aligned this way.
 -write.table() is then used to write the data set to 'Tidy Data.txt' file with quote=FALSE for disabling quotes and row.name=FALSE.
--user can read the 'Tidy Data.txt' file for his own purpose using parameter 'header=TRUE'.
+-user can read the 'Tidy Data.txt' file for his own purpose using parameter 'header=TRUE, check.names=FALSE,sep="" '.
 
 ===================================================================================
