@@ -1,8 +1,11 @@
-DATA DICTIONARY : Human Activity Recognition Using Smartphones
+DATA DICTIONARY : 
+=================
+Human Activity Recognition Using Smartphones
+---------------------------------------------
 
 Subject
 	Subject / Volunteer number within an age bracket of 19-48 years
-		1,2,3,…,30
+		1,2,3,â€¦,30
 
 Activity
 	Activity performed by subject
