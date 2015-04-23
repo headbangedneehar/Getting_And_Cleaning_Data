@@ -1,5 +1,7 @@
-run_analysis.R Script:
+!READ MD FILES AS RAW!
 ===================================================================================
+run_analysis.R Script:
+-----------------------------------------------------------------------------------
 
 The script must be run in R console or Rstudio console. The script , when run , takes input files from the 'UCI HAR dataset' folder which includes activity_labels, features, features_info and folders test and train containing X, y and subject text files each. The output of the script returns a new text file named 'Tidy Data.txt', which shows the mean values of the accelerometer and gyroscope calculations acquired that were acquired in each experiments.
 
